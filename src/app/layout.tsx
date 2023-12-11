@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
-import './globals.css';
+import { ToastContainer, toast } from 'react-toastify';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Planet from '@/components/Planet';
+import './globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Montserrat({ subsets: ['latin'] });
 
@@ -17,6 +19,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en">
 			<body className={inter.className}>
 				<div className="relative flex h-full w-full flex-col items-center overflow-x-hidden">
+					<ToastContainer
+						position="top-right"
+						autoClose={5000}
+						hideProgressBar={false}
+						newestOnTop={false}
+						closeOnClick
+						rtl={false}
+						pauseOnFocusLoss
+						draggable
+						pauseOnHover
+						theme="light"
+					/>
 					<Planet />
 					<Header />
 					{children}

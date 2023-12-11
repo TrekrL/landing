@@ -1,9 +1,11 @@
 'use client';
 import { FormEvent, useState } from 'react';
+import { notifyHelper } from '@/utils/notifyHelper';
 
 const ContactUs = () => {
 	const [email, setEmail] = useState<string>('');
 	const [message, setMessage] = useState<string>('');
+	const { errorToast, successToast } = notifyHelper();
 
 	const onSubmit = async (e: FormEvent) => {
 		e.preventDefault();
@@ -17,8 +19,12 @@ const ContactUs = () => {
 				method: 'POST',
 				body: formData,
 			});
+			setEmail('');
+			setMessage('');
+			successToast('Your message has been sent, we will contact you soon.');
 		} catch (error) {
 			console.error('Error submitting form:', error);
+			errorToast('Something went wrong, please try again or try later.');
 		}
 	};
 
@@ -42,7 +48,7 @@ const ContactUs = () => {
 								type="email"
 								id="email"
 								onChange={e => setEmail(e.target.value)}
-								placeholder="expample@mail.com"
+								placeholder="example@mail.com"
 								value={email}
 								required
 							/>
