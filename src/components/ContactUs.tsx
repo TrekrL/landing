@@ -32,9 +32,9 @@ const ContactUs = () => {
 		<section id="contact" className="flex w-full flex-col items-center px-2.5">
 			<div className="section-wrapper mt-12 flex w-full flex-col items-center gap-14 rounded-[20px] bg-custom-grayish-blue px-8 py-14">
 				<div className="flex flex-col items-center gap-2">
-					<h3 className="text-2xl font-semibold text-custom-white">Still have questions?</h3>
+					<h3 className="text-2xl font-semibold text-custom-white">Question or Suggestion</h3>
 					<p className="text-xl font-medium text-custom-gray">
-						Can’t find the answer you’re looking for? Please contact our friendly team.
+						Have a question or suggestion? Please contact our friendly team
 					</p>
 				</div>
 				<form className="flex w-full max-w-470 flex-col gap-10" onSubmit={onSubmit}>

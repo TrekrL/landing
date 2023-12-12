@@ -6,12 +6,12 @@ const Download = () => {
 			id="download"
 			className="bg flex w-full flex-col items-center bg-hero-background bg-cover bg-no-repeat px-2.5 bg-blend-normal"
 		>
-			<div className="section-wrapper relative mt-hero flex flex-row gap-4">
+			<div className="section-wrapper relative mt-hero flex flex-row gap-14">
 				<div className="flex flex-col justify-center">
 					<div className="max-w-[833px]">
 						<h1 className="max-h-[127px] text-[104px] font-bold text-custom-white ">TREKR</h1>
 						<p className="text-[32px] font-medium text-custom-gray">
-							Keep tracking of your personal geographical achievements
+							Keep tracking your personal travel achievements
 						</p>
 					</div>
 					<div className="mt-[72px] flex flex-row gap-4">
