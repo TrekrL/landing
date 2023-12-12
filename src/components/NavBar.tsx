@@ -1,20 +1,21 @@
 import { NavLinks } from '@/core/types/navLinks.type';
+import Link from 'next/link';
 
 const NavBar = () => {
 	const navLinks: NavLinks[] = [
-		{ link: 'Download', id: 'download' },
-		{ link: 'FAQ', id: 'faq' },
-		{ link: 'Contact Us', id: 'contact' },
-		{ link: 'Privacy', id: 'privacy' },
+		{ title: 'Download', id: 'download', link: '#download' },
+		{ title: 'FAQ', id: 'faq', link: '#faq' },
+		{ title: 'Contact Us', id: 'contact', link: '#contact' },
+		{ title: 'Privacy', id: 'privacy', link: '/privacy' },
 	];
 
 	return (
 		<>
-			{navLinks.map(({ link, id }) => {
+			{navLinks.map(({ title, id, link }) => {
 				return (
-					<a key={id} href={`#${id}`}>
-						{link}
-					</a>
+					<Link key={id} href={`${link}`}>
+						{title}
+					</Link>
 				);
 			})}
 		</>

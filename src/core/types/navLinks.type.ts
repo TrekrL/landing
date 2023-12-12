@@ -1,4 +1,5 @@
 export interface NavLinks {
-	link: string;
+	title: string;
 	id: string;
+	link: string;
 }

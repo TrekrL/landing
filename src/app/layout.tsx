@@ -31,10 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 						pauseOnHover
 						theme="light"
 					/>
-					<Planet />
-					<Header />
 					{children}
-					<Footer />
 				</div>
 			</body>
 		</html>

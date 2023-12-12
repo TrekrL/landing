@@ -7,6 +7,14 @@ const config: Config = {
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
+		fontSize: {
+			xs: '12px',
+			sm: '14px',
+			base: '16px',
+			lg: '18px',
+			'2xl': '24px',
+			'3xxl': '32px',
+		},
 		borderWidth: {
 			'0': '0px',
 			'1': '1px',
