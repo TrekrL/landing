@@ -18,7 +18,7 @@ const Accordion = ({ question, answer }: AccordingProps) => {
 				<h3 className="text-xl font-medium text-custom-light-gray ">{question}</h3>
 				<div
 					className={`overflow-hidden transition-[max-height] duration-1000 ease-in  ${
-						show ? 'max-h-40' : 'max-h-0'
+						show ? 'max-h-44' : 'max-h-0'
 					}`}
 				>
 					<p className="text-base font-normal text-custom-gray">{answer}</p>
